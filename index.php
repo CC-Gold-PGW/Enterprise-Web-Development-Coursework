@@ -6,6 +6,14 @@ if (mysqli_connect_errno()) {
   exit();
 } else {
   echo "Database Connected!";
+  
+  $sql = "SELECT `Counter`.`Yea` FROM `Counter`";
+  $result = mysqli_query($con,$sql);
+
+  $row = mysqli_fetch_array($result, MYSQLI_NUM);
+  printf ("%s (%s)\n", $row[0], $row[1]);
+
+  mysqli_close($con);
 }
 
 
