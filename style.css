@@ -10,7 +10,7 @@ body {
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 	color: black;
-	font-size: 30px;
+	font-size: 1vw;
 }
 
 #content {
@@ -33,7 +33,6 @@ body {
 
 #right-margin {
 	width: 30%;
-	height: 90%;
 	float: left;
 	background-color: pink;
 }
@@ -41,7 +40,6 @@ body {
 
 #left-margin {
 	width: 30%;
-	height: 90%;
 	float: left;
 	background-color: lightblue;
 }
@@ -49,24 +47,42 @@ body {
 
 #contents {
 	width: 40%;
-	height: 90%;
 	float: left;
 	background-color: lightgray;
 }
 
+#right-margin, #left-margin, #contents{
+	height: 85%;
+}
+
 #footer {
-	overflow: hidden;
+	overflow: auto;
 	text-overflow: ellipsis;
-	line-height: 160px;
+	/* line-height: 160px; */
 	width: 100%;
-	height: 10%;
+	height: 15%;
 	background-color: lightyellow;
 }
 
-h1 {
+h1, h2, h3, h4 {
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 	color: black;
-	font-size: 60px;
 	margin: 0 0 0 0;
+}
+
+h1 {
+	font-size: 4vw;
+}
+
+h2 {
+	font-size: 2.5vw;
+}
+
+h3 {
+	font-size: 1.75vw;
+}
+
+h4 {
+	font-size: 1.35vw;
 }
