@@ -2,8 +2,13 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL|E_STRICT);
 // Connects to your Database 
-mysqli_connect("Localhost", "root", "qnAHzPvrrmE3y38R") or die(mysqli_error()); 
-mysqli_select_db("Counter") or die(mysqli_error());
+$con = mysqli_connect("Localhost", "root", "qnAHzPvrrmE3y38R", "Counter");
+
+if (mysqli_connect_errno()) {
+	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	exit;
+  }
+
 //Adds one to the counter
 mysqli_query("SELECT `Counter`.`Yea` FROM `Counter`= counter + 1");
 //Retrieves the current count
