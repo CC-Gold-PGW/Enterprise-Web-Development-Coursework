@@ -10,11 +10,13 @@ if (mysqli_connect_errno()) {
   }
 
 //Adds one to the counter
-mysqli_query("SELECT `Counter`.`Yea` FROM `Counter`= counter + 1");
+mysqli_query($con, "SELECT `Counter`.`Yea` FROM `Counter`= counter + 1");
 //Retrieves the current count
-$count = mysqli_fetch_row(mysqli_query("SELECT `Counter`.`Yea` FROM `Counter`;"));
+$count = mysqli_query($con, "SELECT `Counter`.`Yea` FROM `Counter`;");
 //Displays the count on your site
 print "$count[0]"; 
+
+mysqli_close($con);
 ?>
 
 <!DOCTYPE html>
