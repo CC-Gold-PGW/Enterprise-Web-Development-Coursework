@@ -85,7 +85,7 @@ mysqli_close($con);
 
 			</div>
 
-			<?php echo "$row"; ?>
+			<h1> <?php echo "$row"; ?> </h1>
 
 
 		</div>
