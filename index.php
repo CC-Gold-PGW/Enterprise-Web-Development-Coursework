@@ -1,11 +1,11 @@
 <?php
 // Connects to your Database 
-mysql_connect("Localhost", "root", "qnAHzPvrrmE3y38R") or die(mysql_error()); 
-mysql_select_db("Counter") or die(mysql_error());
+mysqli_connect("Localhost", "root", "qnAHzPvrrmE3y38R") or die(mysqli_error()); 
+mysqli_select_db("Counter") or die(mysqli_error());
 //Adds one to the counter
-mysql_query("SELECT `Counter`.`Yea` FROM `Counter`= counter + 1");
+mysqli_query("SELECT `Counter`.`Yea` FROM `Counter`= counter + 1");
 //Retrieves the current count
-$count = mysql_fetch_row(mysql_query("SELECT `Counter`.`Yea` FROM `Counter`;"));
+$count = mysqli_fetch_row(mysqli_query("SELECT `Counter`.`Yea` FROM `Counter`;"));
 //Displays the count on your site
 print "$count[0]"; 
 ?>
