@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL|E_STRICT);
 // Connects to your Database 
 mysqli_connect("Localhost", "root", "qnAHzPvrrmE3y38R") or die(mysqli_error()); 
 mysqli_select_db("Counter") or die(mysqli_error());
