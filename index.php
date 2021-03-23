@@ -1,25 +1,39 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL|E_STRICT);
-// Connects to your Database 
-$con = mysqli_connect("Localhost", "root", "qnAHzPvrrmE3y38R", "Counter");
+$con=mysqli_connect("localhost","my_user","my_password","my_db");
 
 if (mysqli_connect_errno()) {
-	echo "Failed to connect to MySQL: " . mysqli_connect_error();
-	exit;
-  }
-
-//Adds one to the counter
-mysqli_query($con, "SELECT `Counter`.`Yea` FROM `Counter`= counter + 1");
-//Retrieves the current count
-$count = mysqli_query($con, "SELECT `Counter`.`Yea` FROM `Counter`;");
-//Displays the count on your site
-
-$row = mysqli_fetch_array($count, MYSQLI_NUM);
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  exit();
+} else {
+  echo "Database Connected!";
+}
 
 
 
-mysqli_close($con);
+
+
+
+
+
+// ini_set('display_errors', 1);
+// error_reporting(E_ALL|E_STRICT);
+// // Connects to your Database 
+// $con = mysqli_connect("Localhost", "root", "qnAHzPvrrmE3y38R", "Counter");
+
+// if (mysqli_connect_errno()) {
+// 	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+// 	exit;
+//   }
+
+// //Adds one to the counter
+// mysqli_query($con, "SELECT `Counter`.`Yea` FROM `Counter`= counter + 1");
+// //Retrieves the current count
+// $count = mysqli_query($con, "SELECT `Counter`.`Yea` FROM `Counter`;");
+// //Displays the count on your site
+
+// $row = mysqli_fetch_array($count, MYSQLI_NUM);
+
+// mysqli_close($con);
 ?>
 
 <!DOCTYPE html>
@@ -85,7 +99,7 @@ mysqli_close($con);
 
 			</div>
 
-			<h1> <?php echo "$row"; ?> </h1>
+			<h1> Results: <?php echo "$row"; ?> </h1>
 
 
 		</div>
