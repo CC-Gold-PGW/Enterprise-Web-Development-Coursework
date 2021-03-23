@@ -17,7 +17,7 @@ $count = mysqli_query($con, "SELECT `Counter`.`Yea` FROM `Counter`;");
 
 $row = mysqli_fetch_array($count, MYSQLI_NUM);
 
-echo "$row";
+
 
 mysqli_close($con);
 ?>
@@ -84,6 +84,8 @@ mysqli_close($con);
 				<h2>Yea or Nay</h2>
 
 			</div>
+
+			<?php echo "$row"; ?>
 
 
 		</div>
