@@ -14,7 +14,6 @@ mysqli_query($con, "SELECT `Counter`.`Yea` FROM `Counter`= counter + 1");
 //Retrieves the current count
 $count = mysqli_query($con, "SELECT `Counter`.`Yea` FROM `Counter`;");
 //Displays the count on your site
-echo "$count"; 
 
 $row = mysqli_fetch_array($count, MYSQLI_NUM);
 
