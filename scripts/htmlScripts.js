@@ -1,4 +1,5 @@
 function buildLoginArea() {
+    //Dynamically build the login elements if logged out,  Logout elements if logged in
     $(`#loginArea, #errorArea`).empty();
     var htmlString;
     if (curUser === null) {

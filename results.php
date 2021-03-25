@@ -1,11 +1,14 @@
 <?php
+    // Establish DB Connection
     $con=mysqli_connect("localhost","root","qnAHzPvrrmE3y38R","Counter");
 
+    // Error out if no DB can be found
     if (mysqli_connect_errno()) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
     exit();
     } else {
 
+    // Get current vote counts
     $curCounts = mysqli_query($con, "SELECT * from `Counts`");
     $results = mysqli_fetch_array($curCounts, MYSQLI_NUM);
 
@@ -56,12 +59,14 @@
         </div>
         <div id="right">
             <label class="labl" id="lablRight">
+                <!-- Display Nay Votes -->
                 <div class="rad">Nay was chosen </br> <?php echo $results[1];?> Times</div>
             </label>
             <p class="results"> </p>
         </div>
         <div id="left">
             <label class="labl" id="lablLeft">
+                <!-- Display Yea Votes -->
                 <div class="rad">Yea was chosen </br> <?php echo $results[0];?> Times</div>
             </label>
         </div>

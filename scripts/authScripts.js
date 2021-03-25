@@ -5,6 +5,7 @@ function getLoggedInUser() {
   if (user != null) {
     curUser = user;
   }
+  // Once logged in status is confirmed, build correct login/logout elements
   buildLoginArea();
 }
 
