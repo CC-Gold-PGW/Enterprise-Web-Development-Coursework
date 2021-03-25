@@ -1,5 +1,0 @@
-$(function () {
-    // $(`#loginArea`).empty();
-    // buildLoginArea();
-});
-

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	
+    <!-- META -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="title" content="Anime: Yea or Nay" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	
+    <!-- LOAD STYLESHEETS -->
+    <link href="style/index.css" rel="stylesheet" type="text/css" media="all" />
+
+	<!-- LOAD JQUERY -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+		integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+		crossorigin="anonymous"></script>
+
+    <!-- LOAD DATA FILES -->
+	<script src="data/data.js"></script>
+
+	<!-- FIREBASE SETUP -->
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script>// Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+    </script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+				 https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>    
+
+	<!-- LOAD LIBRARIES -->
+	<script src="scripts/index.js"></script>
+	<script src="scripts/authScripts.js"></script>
+	<script src="scripts/htmlScripts.js"></script>
+
+    
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>A N I M E</h1>
+        </div>
+        <div id="right">
+            <label class="labl" id="lablRight">
+                <input type="radio" name="radioname" value="nay"/>
+                <div class="rad">N A Y</div>
+            </label>
+        </div>
+        <div id="left">
+            <label class="labl" id="lablLeft">
+                <input type="radio" name="radioname" value="yea" />
+                <div class="rad">Y E A</div>
+            </label>
+        </div>
+        <div id="footer">
+            <div id="loginArea"></div>
+			<div id="errorArea"></div>
+        </div>
+    </div>
+</body>
+
+</html>

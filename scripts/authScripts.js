@@ -4,9 +4,6 @@ function getLoggedInUser() {
   var user = firebase.auth().currentUser;
   if (user != null) {
     curUser = user;
-    console.log(curUser.email);
-  } else {
-    console.log("Nope");
   }
   buildLoginArea();
 }
@@ -27,8 +24,6 @@ function login() {
 
     // ...
   });
-
-
 
 }
 
